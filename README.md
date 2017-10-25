@@ -1,7 +1,7 @@
 # Youtube Stream Analytics
 
-A small Sinatra application to show relevant analytics/metrics about a
-YouTube livestream.
+A small Sinatra application to show relevant analytics/metrics for
+YouTube livestreams.
 
 ![alt text](https://i.imgur.com/32XmZMd.png "screenshot")
 
