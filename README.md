@@ -3,7 +3,7 @@
 A small Sinatra application to show relevant analytics/metrics about a
 YouTube livestream.
 
-[Imgur](https://i.imgur.com/32XmZMd.png)
+![alt text](https://i.imgur.com/32XmZMd.png "screenshot")
 
 ### Development
 
