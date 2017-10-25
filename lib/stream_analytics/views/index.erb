@@ -1,0 +1,18 @@
+<%= erb :stream_header %>
+<%= erb :options_overlay %>
+
+<div id="main_row" class="row">
+    <!-- Graph Container -->
+    <div class="col-sm-6 col-lg-6 col-xl-6">
+        <%= erb :tabs %>
+    </div>
+
+    <!-- Chat Goes Here -->
+    <div class="col-sm-6 col-lg-6 col-xl-6" style="padding-top: 1%;">
+        <%= erb :chat %>
+    </div>
+</div>
+<div id="second_row" class="row start_hidden">
+    <div id="stream_container" class="col-sm-6"></div>
+    <%= erb :poll %>
+</div>

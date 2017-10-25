@@ -1,0 +1,50 @@
+<div class="col-sm-6">
+    <div id="poll_container" style="height: 480px; width: 100%;"></div>
+</div>
+
+<script>
+    window.drawPoll = function(data){
+        pollingData = [];
+        for(var i = 0; i < 5; i++){
+            pollingData.push({ "name": data.words[i].content, "y": data.words[i].count });
+        }
+        poll.series[0].setData(pollingData);
+        poll.redraw();
+    }
+
+
+poll = Highcharts.chart('poll_container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    colors: ['#660024', '#A30039', '#FF0052', '#FF5C95', '#FF99BD'],
+    title: {
+        text: 'Top 5 Answers'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Count',
+        colorByPoint: true,
+        data: []
+    }]
+});
+
+</script>

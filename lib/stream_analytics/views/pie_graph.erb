@@ -1,0 +1,48 @@
+<div id="pie_container" style="height: 100%; width: 100%;"></div>
+
+<script>
+    window.drawPieChart = function(data){
+        pieChartData = [];
+        for(var i = 0; i < 5; i++){
+            pieChartData.push({ "name": data.words[i].content, "y": data.words[i].count });
+        }
+        pieChart.series[0].setData(pieChartData);
+        pieChart.redraw();
+    }
+
+
+pieChart = Highcharts.chart('pie_container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie',
+        height: 479
+    },
+    title: {
+        text: 'Top 5 Answers'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Count',
+        colorByPoint: true,
+        data: []
+    }]
+});
+
+</script>
