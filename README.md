@@ -1,7 +1,9 @@
-# youtube-stream-analytics
+# Youtube Stream Analytics
 
 A small Sinatra application to show relevant analytics/metrics about a
 YouTube livestream.
+
+![alt text](https://i.imgur.com/32XmZMd.png "screenshot")
 
 ### Development
 
@@ -29,3 +31,11 @@ Copy the "live-chat-id" and paste on your browser the following with your live c
 
 ``` http://localhost:3000/analytics?live_chat_id=paste-here ```
 
+# Contributors
+
+* Bernard Decelian
+* Jon Moss
+* Leslie Manrique
+* Michael Martinez
+* Nasita Haque
+ 
