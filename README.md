@@ -1,8 +1,9 @@
 # Youtube Stream Analytics
 
 A small Sinatra application to show relevant analytics/metrics for
-YouTube livestreams.
+YouTube livestreams in collaboration with Vox Product Team and Polygon. 
 
+[Vox Blog](https://product.voxmedia.com/2017/8/10/16115358/doing-it-live-lessons-from-vox-products-2017-summer-interns?utm_campaign=product.voxmedia&utm_content=chorus&utm_medium=social&utm_source=twitter)
 ![alt text](https://i.imgur.com/32XmZMd.png "screenshot")
 
 ### Development
